@@ -19,7 +19,7 @@ jobs:
   test-reveal-secret:
     runs-on: ubuntu-latest
     steps:
-      - name: revelle le secret maintenant
+      - shell: bash
       env : 
         TESTSECRET : ${{secrets.TESTSECRETAPI}}
       - run: echo 'mon secret est $TESTSECRET'
