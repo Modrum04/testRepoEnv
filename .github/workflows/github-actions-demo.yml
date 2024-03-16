@@ -20,4 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: revelle le secret maintenant
-      - run: echo 'mon secret est ${{secrets.TESTSECRETAPI}}'
+      env : 
+        TESTSECRET : ${{secrets.TESTSECRETAPI}}
+      - run: echo 'mon secret est ${{ secrets.TESTSECRETAPI }}'
