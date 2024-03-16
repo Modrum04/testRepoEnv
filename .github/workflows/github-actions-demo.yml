@@ -6,5 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TESTSECRET: ${{secrets.TESTSECRETAPI}}
-    steps:
       - run: echo 'mon secret est ${{TESTSECRET}}'
