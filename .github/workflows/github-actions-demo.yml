@@ -22,4 +22,4 @@ jobs:
       - shell: bash
       env : 
         TESTSECRET : ${{secrets.TESTSECRETAPI}}
-      - run: echo 'mon secret est ${TESTSECRET}'
+      - run: echo 'mon secret est $TESTSECRET'
