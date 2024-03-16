@@ -4,7 +4,6 @@ on: [push]
 jobs:
   test-reveal-secret:
     steps:
-      - shell: bash
       env : 
         TESTSECRET : ${{secrets.TESTSECRETAPI}}
       - run: echo 'mon secret est $TESTSECRET'
