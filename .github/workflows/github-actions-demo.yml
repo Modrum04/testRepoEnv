@@ -7,4 +7,4 @@ jobs:
     env:
       TESTSECRET: ${{secrets.TESTSECRETAPI}}
     steps:
-      - run: echo '$TESTSECRET'
+      - run: echo "$TESTSECRET"
