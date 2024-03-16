@@ -1,4 +1,4 @@
-const apikey = process.env.API_KEY;
+const apikey = process.env.TESTSECRETAPI;
 
 if (apikey === 1234) {
   console.log("good job");
