@@ -22,4 +22,4 @@ jobs:
       - name: revelle le secret maintenant
       env : 
         TESTSECRET : ${{secrets.TESTSECRETAPI}}
-      - run: echo 'mon secret est ${{ secrets.TESTSECRETAPI }}'
+      - run: echo 'mon secret est $TESTSECRET'
