@@ -18,9 +18,6 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Export GitHub secrets to environment variables
         run: |
           echo "TESTSECRETAPI=${{ secrets.TESTSECRETAPI }}" >> $GITHUB_ENV
