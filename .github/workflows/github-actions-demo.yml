@@ -4,7 +4,7 @@ on: [push]
 jobs:
   test-reveal-secret:
     runs-on: ubuntu-latest
+    env:
+      TESTSECRET: ${{secrets.TESTSECRETAPI}}
     steps:
-      env : 
-        TESTSECRET : ${{secrets.TESTSECRETAPI}}
       - run: echo 'mon secret est $TESTSECRET'
