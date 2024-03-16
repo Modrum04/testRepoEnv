@@ -3,7 +3,6 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   test-reveal-secret:
-    runs-on: ubuntu-latest
     steps:
       - shell: bash
       env : 
