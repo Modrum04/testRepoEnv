@@ -37,7 +37,7 @@ jobs:
           node-version: 20
       - name: Use secret in index.js
         env:
-          SECRET_TOKEN: ${{ secrets.TESTSECRETAPI }}
+          SECRET_TOKEN: "test"
         run: |
           echo "Votre secret est : $SECRET_TOKEN" >> index.js
       - name: Setup Pages
