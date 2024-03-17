@@ -31,6 +31,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Use secret in index.js
+        env:
+          SECRET_TOKEN: ${{ secrets.TESTSECRETAPI }}
+        run: |
+          echo "Votre secret est : $SECRET_TOKEN" >> index.js
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
