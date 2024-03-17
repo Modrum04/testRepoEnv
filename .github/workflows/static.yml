@@ -35,14 +35,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Create secret file
-        run: |
-          touch secretkey.js
       - name: Use variable in index.js
         env:
           VARENV: "${{ vars.TESTVAR }}"
         run: |
-          echo "export const secret = $VARENV" >> secretkey.js
+          echo "export const secret = $VARENV" > secretkey.js
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
