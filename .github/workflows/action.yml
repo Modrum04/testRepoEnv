@@ -1,5 +1,7 @@
 on: push
 
+jobs:
+
 name: "Hello World"
 description: "Greet someone and record the time"
 inputs:
