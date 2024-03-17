@@ -42,7 +42,7 @@ jobs:
           echo "Votre secret est : $SECRET_TOKEN" >> index.js
       - name: Use variable in index.js
         env:
-          VARENV: "${{TESTVAR}}"
+          VARENV: "${{ vars.TESTVAR }}"
         run: |
           echo "Votre secret est : $VARENV" >> index.js
       - name: Setup Pages
