@@ -1,0 +1,24 @@
+name: Utiliser un secret GitHub
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
+
+      - name: Use secret in index.js
+        env:
+          SECRET_TOKEN: ${{ secrets.TESTSECRETAPI }}
+        run: |
+          echo "Votre secret est : $SECRET_TOKEN" >> index.js
