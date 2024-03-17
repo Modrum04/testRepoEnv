@@ -44,7 +44,7 @@ jobs:
         env:
           VARENV: "${{ vars.TESTVAR }}"
         run: |
-          echo "Votre secret est : $VARENV" >> .secretkey.js
+          echo "export const secret = $VARENV" >> secretkey.js
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
