@@ -35,11 +35,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Use secret in index.js
-        env:
-          SECRET_TOKEN: "test"
+      - name: Create secret file
         run: |
-          echo "Votre secret est : $SECRET_TOKEN" >> index.js
+          touch secretkey.js
       - name: Use variable in index.js
         env:
           VARENV: "${{ vars.TESTVAR }}"
