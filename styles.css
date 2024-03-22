@@ -1,0 +1,172 @@
+:root {
+  --primary-color: #7d84b2;
+  --secondary-color: rgb(125, 132, 178, 0.7);
+  --third-color: #5856d6;
+  --font-primary-color: white;
+  --info-bulle-color: rgb(53, 58, 90, 0.9);
+
+  --primary-font-size: 1rem;
+  --secondary-font-size: 1.1rem;
+  --primary-font-family: "Inter", sans-serif;
+  --secondary-font-family: "Press Start 2P", system-ui;
+
+  --spacing: 1rem;
+  --spacing-double: calc(var(--spacing) * 2);
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(Assets/city-toulouse.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.avatar {
+  border-radius: 50%;
+  max-width: 100%;
+  max-height: 100%;
+
+  border: solid;
+  border-color: white;
+}
+
+.avatar-contener {
+  height: clamp(50px, 8dvw, 90px);
+}
+
+h1 {
+  font-family: var(--secondary-font-family);
+  color: #fafafa;
+  font-weight: bold;
+  -webkit-text-stroke: 0.1px black;
+  font-size: clamp(18px, 3vw, 30px);
+  display: flex;
+  align-items: center;
+
+  width: fit-content;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 12dvh;
+  background-color: var(--primary-color);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+main {
+  height: 80dvh;
+  padding-inline: var(--spacing);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  font-family: var(--primary-font-family);
+  gap: var(--spacing);
+}
+
+.dynamic-content {
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer {
+  height: 5dvh;
+  display: flex;
+  justify-content: center;
+}
+.scoring {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #5e5ce5, #4f4dc1);
+}
+.loader {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*.loader::before,
+.loader::after {
+  /* content: "0 1 2 3 4 5 6 7 8 9 0";
+  font-size: 30px;
+  font-family: monospace;
+  font-weight: bold;
+  line-height: 1em;
+  height: 1em;
+  width: 1.2ch;
+  text-align: center;
+
+  color: #0000;
+
+  overflow: hidden;
+   animation: crono 99s infinite linear;
+  animation: crono 99s infinite linear; 
+}*/
+
+.valid-button {
+  border: none;
+  text-decoration: none;
+  color: white;
+  background-color: var(--third-color);
+  margin-top: 8px;
+  padding: 12px 24px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.element-disabled {
+  visibility: hidden;
+}
+
+/*@keyframes crono {
+  0% {
+    text-shadow: 0 0 0 #000;
+  }
+
+  100% {
+    text-shadow: 0 -100em 0 #000;
+  }
+}*/
+
+@media screen and (min-width: 900px) {
+  main {
+    max-width: 95%;
+  }
+
+  .dynamic-content {
+    width: clamp(500px, 80dvw, 2000px);
+  }
+  .scoring {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #5e5ce5, #4f4dc1);
+  }
+  h1 {
+    width: 90%;
+  }
+}

@@ -1,0 +1,38 @@
+.interrogation {
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    padding: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    margin-block: 24px;
+
+}
+
+
+.choix-des-réponses {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.choix-des-réponses>button {
+    background-color: var(--secondary-color);
+    padding: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 16px;
+    max-width: 250px;
+    min-width: 250px;
+}
+
+.loader.inactive {
+    display: none;
+}
