@@ -44,7 +44,7 @@
 
 #iframe-container {
   width: 100%;
-  height: 40%;
+  min-height: 20dvw;
 }
 #info-iframe {
   width: 100%;
