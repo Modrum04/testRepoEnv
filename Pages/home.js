@@ -64,7 +64,7 @@ export function home() {
   const infoParagrahe = document.querySelector("#info-paragraphe");
   const infoTitle = document.querySelector("#info-title");
   const infoIframe = document.querySelector("#info-iframe");
-  infoTitle.innerText = "Bienvenu !";
+  infoTitle.innerText = "Bienvenue !";
   infoParagrahe.innerText = "";
 
   nextButton.addEventListener("click", () => {
